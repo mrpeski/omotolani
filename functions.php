@@ -109,6 +109,7 @@ function omotolani_widgets_init() {
 }
 add_action( 'widgets_init', 'omotolani_widgets_init' );
 
+add_image_size( 'category-thumb', 300, 9999 );
 
 function cat_post_limits( $limit, $query ) {
 			if ( ! is_admin() && ! $query->is_main_query() ) {
@@ -126,7 +127,8 @@ function omotolani_scripts() {
 	wp_enqueue_script( 'omotolani-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'omotolani-web', get_template_directory_uri() . '/js/web.js', array('jquery'), '2016', true );
-
+	wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.js', array('jquery'), '2.1.3', true );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array('vue'), '2.1.3', true );
 	wp_enqueue_script( 'omotolani-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

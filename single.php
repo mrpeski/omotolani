@@ -8,14 +8,15 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="row">
+<div class="col-lg-3 col-xs-12">Something</div>
+<div class="col-lg-6 col-xs-12">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'template-parts/content', 'article' );
 
 			the_post_navigation();
 
@@ -28,8 +29,10 @@ get_header(); ?>
 		?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
-
+</div>
+<div class="col-lg-3 col-xs-12">
+	<?php get_sidebar(); ?>
+</div>
+</div>
 <?php
-get_sidebar();
 get_footer();

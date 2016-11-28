@@ -1,8 +1,8 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('popular__card'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-3 col-xs-12 popular__card'); ?>>
 	<div class="entry-content">
 	<?php if ( has_post_thumbnail() ) : ?>
 	    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-	        <?php the_post_thumbnail(array(300, 350) ); ?>
+	        <?php the_post_thumbnail('category-thumb'); ?>
 	    </a>
 	<?php endif; ?>
 	</div>
