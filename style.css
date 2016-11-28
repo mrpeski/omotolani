@@ -51,6 +51,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -1103,7 +1104,7 @@ a{ text-decoration: none; color: crimson; }
 
 .post-categories { list-style: none; }
 .post-categories li { display: inline-block; font-size: 0.8em; border-bottom: 2px solid #333; /*border-radius: 8px;*/ padding: 4px 6px;
-	line-height: 1; background-color: #ff0;
+	line-height: 1.5; background-color: #ff0; margin: 10px 0;
 }
 .post-categories a { color: #333;  display: block; text-transform: lowercase;}
 
@@ -1116,6 +1117,10 @@ a{ text-decoration: none; color: crimson; }
 
 .meta { margin-top: -100px;   padding: 10px; color: white}
 .comments, .date { font-size: 0.7em; }
+.comments-area { background: #eee; }
+.comment {padding: 10px; clear: both;}
+.comment-content { float: right; }
+.comment-meta { float: left; }
 .entry-title a { color: white }
 
 footer { clear: both; }
